@@ -24,5 +24,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Content "," Insert Layout ");
             }
         });
+
+        final Button update_button = findViewById(R.id.update_button);
+
+        update_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentUpdate = new Intent(MainActivity.this, InsertBookingActivity.class);
+                MainActivity.this.startActivity(intentUpdate);
+
+                Log.i("Content", "Update log");
+            }
+        });
     }
 }
