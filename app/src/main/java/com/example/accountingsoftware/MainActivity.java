@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(intentUpdate);
 
                 Log.i("Content", "Update log");
+            }
+        });
+
+        final Button listButton = findViewById(R.id.list_button);
+
+        listButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("here");
+                Intent intentList = new Intent(MainActivity.this, ListBookingsActivity.class);
+                MainActivity.this.startActivity(intentList);
+
+                Log.i("Content", "List log");
             }
         });
     }
